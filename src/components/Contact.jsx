@@ -75,15 +75,6 @@ export default function Contact() {
                   </div>
                 </a>
 
-                <a href="mailto:Info@gonextcoat.com" className="flex items-start gap-4 group">
-                  <div className="w-11 h-11 bg-orange-brand rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <Mail size={18} />
-                  </div>
-                  <div>
-                    <p className="text-skyblue-brand text-xs font-medium uppercase tracking-wide mb-0.5">Email</p>
-                    <p className="text-white font-semibold">Info@gonextcoat.com</p>
-                  </div>
-                </a>
 
                 <div className="flex items-start gap-4">
                   <div className="w-11 h-11 bg-orange-brand rounded-xl flex items-center justify-center flex-shrink-0">
@@ -217,9 +208,6 @@ export default function Contact() {
                   )}
                 </button>
 
-                <p className="text-gray-400 text-xs text-center">
-                  By submitting, your default email client will open addressed to Info@gonextcoat.com
-                </p>
               </form>
             )}
           </div>
