@@ -94,17 +94,6 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:Info@gonextcoat.com" className="flex items-start gap-3 group">
-                  <div className="w-8 h-8 bg-orange-brand rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform mt-0.5">
-                    <Mail size={14} />
-                  </div>
-                  <div>
-                    <p className="text-white/40 text-xs mb-0.5">Email</p>
-                    <p className="text-white text-sm font-medium group-hover:text-orange-brand transition-colors">Info@gonextcoat.com</p>
-                  </div>
-                </a>
-              </li>
-              <li>
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 bg-orange-brand rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
                     <MapPin size={14} />
