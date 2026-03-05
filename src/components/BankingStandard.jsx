@@ -1,0 +1,71 @@
+import { useEffect, useRef, useState } from 'react'
+import { ShieldCheck, ClipboardList, MapPin } from 'lucide-react'
+
+const values = [
+  {
+    icon: ShieldCheck,
+    title: 'Financial Integrity',
+    description: 'We provide detailed, transparent, and guaranteed line-item quotes. Our banking background means we value accuracy — no hidden fees, no "estimates" that shift halfway through the job.',
+  },
+  {
+    icon: ClipboardList,
+    title: 'Process-Driven Excellence',
+    description: 'We utilize professional-grade project management tools to ensure your timeline is respected and your expectations are met.',
+  },
+  {
+    icon: MapPin,
+    title: 'A Local Legacy',
+    description: 'We live and work right here in Fulton. We aren\'t a national franchise; we are your neighbors, deeply invested in the long-term beauty and value of Maryland\'s homes.',
+  },
+]
+
+export default function BankingStandard() {
+  const ref = useRef(null)
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setVisible(true) },
+      { threshold: 0.1 }
+    )
+    if (ref.current) observer.observe(ref.current)
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <section className="py-28 bg-gray-50" ref={ref}>
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-10">
+        {/* Header */}
+        <div className={`text-center mb-16 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <p className="text-orange-brand font-semibold text-sm uppercase tracking-[0.2em] mb-4">Our Values</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy leading-tight mb-6 tracking-tight">
+            The NextCoat Difference:<br className="hidden md:block" /> The "Banking" Standard
+          </h2>
+          <p className="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">
+            Because our professional roots and belief in community growth, we operate with a level of discipline that sets us apart.
+          </p>
+          <div className="w-16 h-0.5 bg-orange-brand mx-auto mt-6" />
+        </div>
+
+        {/* 3-column grid */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {values.map(({ icon: Icon, title, description }, i) => (
+            <div
+              key={title}
+              className={`bg-white rounded-xl p-10 border border-gray-100 hover:border-orange-brand/20 hover:shadow-lg transition-all duration-500 ${
+                visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
+              style={{ transitionDelay: `${(i + 1) * 150}ms` }}
+            >
+              <div className="w-14 h-14 bg-orange-brand/10 rounded-xl flex items-center justify-center mb-6">
+                <Icon size={26} className="text-orange-brand" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-xl font-bold text-navy mb-3 tracking-tight">{title}</h3>
+              <p className="text-gray-500 leading-relaxed text-[15px]">{description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

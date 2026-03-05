@@ -1,9 +1,10 @@
-import { Phone, Mail, MapPin, ExternalLink } from 'lucide-react'
+import { Phone, MapPin, ExternalLink } from 'lucide-react'
 
 const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
   { label: 'Services', href: '#services' },
+  { label: 'Process', href: '#process' },
   { label: 'Gallery', href: '#gallery' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -11,10 +12,8 @@ const navLinks = [
 const services = [
   'Interior Painting',
   'Exterior Painting',
-  'Cabinet Refinishing',
-  'Deck & Fence Staining',
+  'Surface Preparation',
   'Color Consultation',
-  'Drywall Repair',
 ]
 
 export default function Footer() {
@@ -25,33 +24,27 @@ export default function Footer() {
 
   return (
     <footer className="bg-navy text-white">
-      {/* Main footer content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-10 py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <img src="/Next coat_bijeli1.svg" alt="NextCoat Painting" className="h-14 w-auto mb-5" />
-            <p className="text-white/60 text-sm leading-relaxed mb-6">
-              Professional painting services for homeowners in Fulton, MD and the greater Maryland area. Quality you can see, service you can trust.
+            <img src="/Next coat_bijeli1.svg" alt="NextCoat Painting" className="h-12 w-auto mb-5" />
+            <p className="text-white/50 text-sm leading-relaxed mb-6">
+              A consulting-grade painting firm serving Fulton, MD and the greater Maryland area. The Banking Standard in every brushstroke.
             </p>
-            <div className="flex items-center gap-2">
-              <div className="h-0.5 w-8 bg-orange-brand" />
-              <span className="text-skyblue-brand text-xs font-semibold uppercase tracking-widest">Est. 2015</span>
-            </div>
           </div>
 
           {/* Quick links */}
           <div>
-            <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-5">Quick Links</h4>
+            <h4 className="text-white font-semibold text-xs uppercase tracking-[0.15em] mb-5">Navigation</h4>
             <ul className="space-y-3">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
                     onClick={(e) => { e.preventDefault(); handleNav(link.href) }}
-                    className="text-white/60 hover:text-orange-brand text-sm transition-colors duration-200 flex items-center gap-2 group"
+                    className="text-white/50 hover:text-white text-sm transition-colors duration-200"
                   >
-                    <span className="w-1 h-1 rounded-full bg-orange-brand opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.label}
                   </a>
                 </li>
@@ -61,16 +54,15 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-5">Services</h4>
+            <h4 className="text-white font-semibold text-xs uppercase tracking-[0.15em] mb-5">Services</h4>
             <ul className="space-y-3">
               {services.map((s) => (
                 <li key={s}>
                   <a
                     href="#services"
                     onClick={(e) => { e.preventDefault(); handleNav('#services') }}
-                    className="text-white/60 hover:text-orange-brand text-sm transition-colors duration-200 flex items-center gap-2 group"
+                    className="text-white/50 hover:text-white text-sm transition-colors duration-200"
                   >
-                    <span className="w-1 h-1 rounded-full bg-orange-brand opacity-0 group-hover:opacity-100 transition-opacity" />
                     {s}
                   </a>
                 </li>
@@ -80,39 +72,24 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-5">Contact Us</h4>
+            <h4 className="text-white font-semibold text-xs uppercase tracking-[0.15em] mb-5">Contact</h4>
             <ul className="space-y-4">
               <li>
-                <a href="tel:2403426095" className="flex items-start gap-3 group">
-                  <div className="w-8 h-8 bg-orange-brand rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform mt-0.5">
-                    <Phone size={14} />
-                  </div>
-                  <div>
-                    <p className="text-white/40 text-xs mb-0.5">Phone</p>
-                    <p className="text-white text-sm font-medium group-hover:text-orange-brand transition-colors">240.342.6095</p>
-                  </div>
+                <a href="tel:2403426095" className="flex items-center gap-3 group">
+                  <Phone size={14} className="text-orange-brand" strokeWidth={1.5} />
+                  <span className="text-white/50 text-sm group-hover:text-white transition-colors">240.342.6095</span>
                 </a>
               </li>
               <li>
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-orange-brand rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <MapPin size={14} />
-                  </div>
-                  <div>
-                    <p className="text-white/40 text-xs mb-0.5">Location</p>
-                    <p className="text-white text-sm font-medium">Fulton, MD</p>
-                  </div>
+                <div className="flex items-center gap-3">
+                  <MapPin size={14} className="text-orange-brand" strokeWidth={1.5} />
+                  <span className="text-white/50 text-sm">Fulton, MD</span>
                 </div>
               </li>
               <li>
-                <a href="https://gonextcoat.com" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 group">
-                  <div className="w-8 h-8 bg-orange-brand rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform mt-0.5">
-                    <ExternalLink size={14} />
-                  </div>
-                  <div>
-                    <p className="text-white/40 text-xs mb-0.5">Website</p>
-                    <p className="text-white text-sm font-medium group-hover:text-orange-brand transition-colors">gonextcoat.com</p>
-                  </div>
+                <a href="https://gonextcoat.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
+                  <ExternalLink size={14} className="text-orange-brand" strokeWidth={1.5} />
+                  <span className="text-white/50 text-sm group-hover:text-white transition-colors">gonextcoat.com</span>
                 </a>
               </li>
             </ul>
@@ -122,12 +99,12 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-white/40 text-xs">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-10 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-white/30 text-xs">
             © {new Date().getFullYear()} NextCoat Painting. All rights reserved.
           </p>
-          <p className="text-white/40 text-xs">
-            Fulton, MD · Licensed & Insured
+          <p className="text-white/30 text-xs">
+            Licensed & Insured · Howard County, MD
           </p>
         </div>
       </div>
