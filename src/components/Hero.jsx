@@ -5,22 +5,18 @@ const slides = [
   {
     id: 1,
     bg: '/images/New_interior.png',
-    headline: 'The Standard You Deserve',
-    sub: 'Where financial-sector discipline meets flawless residential painting.',
   },
   {
     id: 2,
     bg: '/images/New_exterior.png',
-    headline: 'Precision. Integrity. Craft.',
-    sub: 'Professional-grade project management for every brushstroke.',
   },
   {
     id: 3,
     bg: '/images/New_exterior2.png',
-    headline: 'Your Home. Our Commitment.',
-    sub: 'Fulton, MD\'s trusted painting consultancy — neighbors, not a franchise.',
   },
 ]
+
+const heroHeadline = 'Expert Interior & Exterior Solutions Tailored to Howard County\'s Premier Homes'
 
 export default function Hero() {
   const [current, setCurrent] = useState(0)
@@ -62,13 +58,13 @@ export default function Hero() {
 
       {/* Content */}
       <div
-        className={`relative z-10 flex flex-col items-center justify-center h-full text-center px-6 transition-all duration-600 ${fading ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}
+        className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6"
       >
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-5 max-w-4xl tracking-tight">
-          {slides[current].headline}
+        <h1 className="text-[2rem] md:text-[2.75rem] lg:text-[3.25rem] font-extrabold text-white leading-tight mb-5 max-w-4xl tracking-tight">
+          {heroHeadline}
         </h1>
         <p className="text-lg md:text-xl text-white/80 font-light mb-10 max-w-2xl leading-relaxed">
-          {slides[current].sub}
+          Howard County's Choice for Professional Interior & Exterior Painting.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -77,7 +73,7 @@ export default function Hero() {
             onClick={(e) => { e.preventDefault(); document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' }) }}
             className="bg-orange-brand hover:bg-orange-light text-white font-semibold px-10 py-4 rounded-lg text-base transition-all duration-200 shadow-xl hover:shadow-orange-brand/30 hover:-translate-y-0.5"
           >
-            Schedule a Consultation
+            Request Your Precision Quote
           </a>
           <a
             href="#about"

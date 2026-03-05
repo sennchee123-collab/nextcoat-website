@@ -5,17 +5,17 @@ const values = [
   {
     icon: ShieldCheck,
     title: 'Financial Integrity',
-    description: 'We provide detailed, transparent, and guaranteed line-item quotes. Our banking background means we value accuracy — no hidden fees, no "estimates" that shift halfway through the job.',
+    description: 'We value precision over "guesstimates." We provide line-item digital quotes that are guaranteed. With NextCoat, the price we shake hands on is the price you pay — no hidden fees, no mid-project surprises, and no "contractor math."',
   },
   {
     icon: ClipboardList,
     title: 'Process-Driven Excellence',
-    description: 'We utilize professional-grade project management tools to ensure your timeline is respected and your expectations are met.',
+    description: 'We replace chaos with corporate-grade project management. Using professional-grade scheduling and communication tools, we ensure your project hits every milestone on time. You\'ll always know exactly who is in your home and what the day\'s goals are.',
   },
   {
     icon: MapPin,
     title: 'A Local Legacy',
-    description: 'We live and work right here in Fulton. We aren\'t a national franchise; we are your neighbors, deeply invested in the long-term beauty and value of Maryland\'s homes.',
+    description: 'We aren\'t a revolving-door franchise; we are your neighbors in Fulton. Our reputation is built one home at a time in Maple Lawn, Clarksville, and Bethesda. We treat your property\'s long-term value as a personal investment in our own community.',
   },
 ]
 
@@ -39,10 +39,10 @@ export default function BankingStandard() {
         <div className={`text-center mb-16 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <p className="text-orange-brand font-semibold text-sm uppercase tracking-[0.2em] mb-4">Our Values</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy leading-tight mb-6 tracking-tight">
-            The NextCoat Difference:<br className="hidden md:block" /> The "Banking" Standard
+            The NextCoat Difference
           </h2>
           <p className="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">
-            Because our professional roots and belief in community growth, we operate with a level of discipline that sets us apart.
+            Rooted in three decades of financial leadership, we bring a level of analytical discipline and community accountability to the painting industry that simply didn't exist before.
           </p>
           <div className="w-16 h-0.5 bg-orange-brand mx-auto mt-6" />
         </div>

@@ -21,21 +21,39 @@ export default function Contact() {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setSending(true)
 
-    const subject = encodeURIComponent(`NextCoat Consultation Request from ${form.name}`)
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\nService: ${form.service}\n\nMessage:\n${form.message}`
-    )
-    window.location.href = `mailto:Info@gonextcoat.com?subject=${subject}&body=${body}`
+    const data = {
+      access_key: 'YOUR_WEB3FORMS_ACCESS_KEY',
+      subject: `NextCoat Precision Quote Request from ${form.name}`,
+      from_name: 'NextCoat Website',
+      name: form.name,
+      email: form.email,
+      phone: form.phone,
+      service: form.service,
+      message: form.message,
+    }
 
-    setTimeout(() => {
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(data),
+      })
+      const json = await res.json()
+      if (json.success) {
+        setSubmitted(true)
+        setForm({ name: '', email: '', phone: '', service: '', message: '' })
+      } else {
+        alert('Something went wrong. Please try again or call us directly.')
+      }
+    } catch {
+      alert('Network error. Please try again or call us directly.')
+    } finally {
       setSending(false)
-      setSubmitted(true)
-      setForm({ name: '', email: '', phone: '', service: '', message: '' })
-    }, 1000)
+    }
   }
 
   return (
@@ -45,10 +63,10 @@ export default function Contact() {
         <div className={`text-center mb-16 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <p className="text-orange-brand font-semibold text-sm uppercase tracking-[0.2em] mb-4">Get In Touch</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy mb-5 tracking-tight">
-            Schedule a Consultation
+            Request Your Precision Quote
           </h2>
           <p className="text-gray-500 text-lg max-w-xl mx-auto leading-relaxed">
-            Fill out the form below and we'll get back to you within 24 hours with a detailed estimate.
+            Complete the form below to schedule your consultation. We'll walk your property, discuss your vision, and provide a detailed, line-item estimate before we leave your driveway.
           </p>
           <div className="w-16 h-0.5 bg-orange-brand mx-auto mt-6" />
         </div>

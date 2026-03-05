@@ -44,10 +44,10 @@ export default function Gallery() {
         <div className={`text-center mb-14 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <p className="text-orange-brand font-semibold text-sm uppercase tracking-[0.2em] mb-4">Our Work</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy mb-5 tracking-tight">
-            Project Gallery
+            Portfolio of Precision
           </h2>
-          <p className="text-gray-500 text-lg max-w-xl mx-auto leading-relaxed">
-            Browse our portfolio of completed projects and see the NextCoat difference for yourself.
+          <p className="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">
+            Explore our recent transformations across Howard and Montgomery Counties. From modern interior refreshes in Fulton to protective exterior coatings in Potomac, see how the "Banking Standard" translates to flawless finishes.
           </p>
           <div className="w-16 h-0.5 bg-orange-brand mx-auto mt-6" />
         </div>

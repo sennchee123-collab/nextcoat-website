@@ -40,9 +40,9 @@ export default function Navbar() {
           className="flex items-center gap-2"
         >
           <img
-            src={scrolled ? '/Logo_original.svg' : '/Next coat_bijeli1.svg'}
+            src={scrolled ? '/Logo_original.svg' : '/Loog_White_Painting.png'}
             alt="NextCoat Painting"
-            className="h-12 w-auto transition-all duration-300"
+            className="h-16 w-auto transition-all duration-300"
           />
         </a>
 
@@ -65,11 +65,11 @@ export default function Navbar() {
 
         {/* CTA */}
         <a
-          href="tel:2403426095"
-          className="hidden md:flex items-center gap-2 bg-orange-brand hover:bg-orange-light text-white font-semibold px-5 py-2.5 rounded-lg text-sm transition-all duration-200"
+          className="hidden md:inline-block bg-orange-brand hover:bg-orange-light text-white font-semibold px-5 py-2.5 rounded-lg text-sm transition-all duration-200"
+          href="#contact"
+          onClick={(e) => { e.preventDefault(); document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' }) }}
         >
-          <Phone size={14} strokeWidth={1.5} />
-          240.342.6095
+          Request Your Precision Quote
         </a>
 
         {/* Mobile hamburger */}
@@ -99,11 +99,11 @@ export default function Navbar() {
             ))}
             <li className="px-6 pt-3 pb-2">
               <a
-                href="tel:2403426095"
-                className="flex items-center gap-2 bg-orange-brand text-white font-semibold px-5 py-2.5 rounded-lg text-sm w-fit"
+                className="inline-block bg-orange-brand text-white font-semibold px-5 py-2.5 rounded-lg text-sm w-fit"
+                href="#contact"
+                onClick={(e) => { e.preventDefault(); document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' }) }}
               >
-                <Phone size={14} strokeWidth={1.5} />
-                240.342.6095
+                Request Your Precision Quote
               </a>
             </li>
           </ul>
