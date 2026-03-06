@@ -101,6 +101,16 @@ export default function Contact() {
                   </div>
                 </div>
 
+                <a href="mailto:Info@gonextcoat.com" className="flex items-start gap-4 group">
+                  <div className="w-10 h-10 bg-orange-brand/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <ExternalLink size={16} className="text-orange-brand" strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <p className="text-white/50 text-xs font-medium uppercase tracking-wide mb-0.5">Email</p>
+                    <p className="text-white font-semibold group-hover:text-orange-brand transition-colors">Info@gonextcoat.com</p>
+                  </div>
+                </a>
+
                 <a href="https://gonextcoat.com" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 group">
                   <div className="w-10 h-10 bg-orange-brand/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <ExternalLink size={16} className="text-orange-brand" strokeWidth={1.5} />

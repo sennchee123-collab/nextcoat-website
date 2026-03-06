@@ -42,7 +42,7 @@ export default function Navbar() {
           <img
             src={scrolled ? '/Logo_original.svg' : '/Loog_White_Painting.png'}
             alt="NextCoat Painting"
-            className="h-16 w-auto transition-all duration-300"
+            className="h-20 w-auto transition-all duration-300"
           />
         </a>
 

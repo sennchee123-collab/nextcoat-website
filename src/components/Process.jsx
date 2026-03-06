@@ -12,19 +12,19 @@ const steps = [
   },
   {
     num: '02',
-    icon: Palette,
-    title: 'Curated Specifications',
-    badge: null,
-    description: 'A great finish is only as good as the chemistry behind it. We partner with Sherwin Williams to create exceptional depth of color and "scrubbability" in high-traffic areas.',
-    image: '/images/Step_2.png',
-  },
-  {
-    num: '03',
     icon: ClipboardCheck,
     title: 'The Protection Phase',
     badge: null,
     description: 'We treat your home like a sanctuary. This phase is about more than sanding; it\'s about dust containment, heavy-duty floor shielding, and meticulous masking.',
     image: '/images/Step_3.png',
+  },
+  {
+    num: '03',
+    icon: Palette,
+    title: 'Curated Specifications',
+    badge: null,
+    description: 'A great finish is only as good as the chemistry behind it. We partner with Sherwin Williams to create exceptional depth of color and "scrubbability" in high-traffic areas.',
+    image: '/images/Step_2.png',
   },
   {
     num: '04',

@@ -16,7 +16,7 @@ const slides = [
   },
 ]
 
-const heroHeadline = 'Expert Interior & Exterior Solutions Tailored to Howard County\'s Premier Homes'
+const heroHeadline = 'Howard County\'s Choice for Professional Interior & Exterior Painting.'
 
 export default function Hero() {
   const [current, setCurrent] = useState(0)
@@ -64,7 +64,7 @@ export default function Hero() {
           {heroHeadline}
         </h1>
         <p className="text-lg md:text-xl text-white/80 font-light mb-10 max-w-2xl leading-relaxed">
-          Howard County's Choice for Professional Interior & Exterior Painting.
+          Professional painters serving Central MD & DC Suburbs. Interior & Exterior House Painters in Howard County.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -73,7 +73,7 @@ export default function Hero() {
             onClick={(e) => { e.preventDefault(); document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' }) }}
             className="bg-orange-brand hover:bg-orange-light text-white font-semibold px-10 py-4 rounded-lg text-base transition-all duration-200 shadow-xl hover:shadow-orange-brand/30 hover:-translate-y-0.5"
           >
-            Request Your Precision Quote
+            Get A Free Estimate
           </a>
           <a
             href="#about"

@@ -42,7 +42,7 @@ export default function BankingStandard() {
             The NextCoat Difference
           </h2>
           <p className="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">
-            Rooted in three decades of financial leadership, we bring a level of analytical discipline and community accountability to the painting industry that simply didn't exist before.
+            We elevate the painting industry with data driven discipline, transparent accountability, and a deep commitment to the communities we serve.
           </p>
           <div className="w-16 h-0.5 bg-orange-brand mx-auto mt-6" />
         </div>

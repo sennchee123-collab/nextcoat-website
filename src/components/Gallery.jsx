@@ -47,7 +47,7 @@ export default function Gallery() {
             Portfolio of Precision
           </h2>
           <p className="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">
-            Explore our recent transformations across Howard and Montgomery Counties. From modern interior refreshes in Fulton to protective exterior coatings in Potomac, see how the "Banking Standard" translates to flawless finishes.
+            See how we're elevating spaces throughout Maryland — from interior updates in Fulton to exterior enhancements in Potomac — with a focus on quality, durability, and meticulous execution.
           </p>
           <div className="w-16 h-0.5 bg-orange-brand mx-auto mt-6" />
         </div>
