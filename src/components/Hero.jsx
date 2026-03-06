@@ -97,22 +97,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Prev/Next arrows — subtle */}
-      <button
-        onClick={prev}
-        className="absolute left-6 top-1/2 -translate-y-1/2 z-20 bg-white/5 hover:bg-white/15 text-white rounded-full p-3 backdrop-blur-sm transition-all border border-white/10"
-        aria-label="Previous slide"
-      >
-        <ChevronLeft size={22} />
-      </button>
-      <button
-        onClick={next}
-        className="absolute right-6 top-1/2 -translate-y-1/2 z-20 bg-white/5 hover:bg-white/15 text-white rounded-full p-3 backdrop-blur-sm transition-all border border-white/10"
-        aria-label="Next slide"
-      >
-        <ChevronRight size={22} />
-      </button>
-
       {/* Scroll down */}
       <button
         onClick={scrollDown}
