@@ -69,7 +69,7 @@ export default function Navbar() {
           href="#contact"
           onClick={(e) => { e.preventDefault(); document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' }) }}
         >
-          Request Your Precision Quote
+          Get A Free Estimate
         </a>
 
         {/* Mobile hamburger */}
@@ -103,7 +103,7 @@ export default function Navbar() {
                 href="#contact"
                 onClick={(e) => { e.preventDefault(); document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' }) }}
               >
-                Request Your Precision Quote
+                Get A Free Estimate
               </a>
             </li>
           </ul>
